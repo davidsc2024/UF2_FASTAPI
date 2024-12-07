@@ -24,8 +24,16 @@ def read_root():
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: Union[str, None] = None):
     if item_id > 100:  # Ejemplo de condición para un ID inexistente
-        raise HTTPException(status_code=404, detail="Item no encontrado")
+        raise HTTPException(
+            status_code=404,
+            detail={
+                "error": "Item no encontrado",
+                "item_id": item_id,
+                "suggestion": "Escribe un ID menor a 100."
+            }
+        )
     return {"item_id": item_id, "q": q}
+
 
 
 @app.post("/items/")
