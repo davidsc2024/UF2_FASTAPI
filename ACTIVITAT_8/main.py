@@ -2,6 +2,7 @@ from typing import Union
 
 from fastapi import FastAPI
 from pydantic import BaseModel
+from fastapi import HTTPException
 
 app = FastAPI()
 
@@ -22,6 +23,8 @@ def read_root():
 
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: Union[str, None] = None):
+    if item_id > 100:  # Ejemplo de condición para un ID inexistente
+        raise HTTPException(status_code=404, detail="Item no encontrado")
     return {"item_id": item_id, "q": q}
 
 
