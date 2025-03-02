@@ -8,3 +8,4 @@ app.include_router(game.router)
 @app.get("/")
 def root():
     return {"mensaje": "API del juego Ahorcado"}
+
