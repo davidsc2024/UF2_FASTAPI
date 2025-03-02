@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Ahorcado</title>
+</head>
+<body id="body">
+    <h1>Juego Ahorcado</h1>
+    <input type="password" id="palabraJugador" placeholder="Introduce una palabra"></input>
+    <input type="checkbox" onclick="cambiaTipo()">Mostrar</button>
+    <button id="comenzarJuego" onclick="comenzarPartida()">Comenzar juego</button>
+    <h1 id="palabraSecreta">Comenzar partida</h1>
+
+    <div id="botones">
+        <button onclick="solucionPalabra(this)">A</button>
+        <button onclick="solucionPalabra(this)">B</button>
+        <button onclick="solucionPalabra(this)">C</button>
+        <button onclick="solucionPalabra(this)">D</button>
+        <button onclick="solucionPalabra(this)">E</button>
+        <button onclick="solucionPalabra(this)">F</button>
+        <button onclick="solucionPalabra(this)">G</button>
+        <button onclick="solucionPalabra(this)">H</button>
+        <button onclick="solucionPalabra(this)">I</button>
+        <button onclick="solucionPalabra(this)">J</button>
+        <button onclick="solucionPalabra(this)">K</button>
+        <button onclick="solucionPalabra(this)">L</button>
+        <button onclick="solucionPalabra(this)">M</button>
+        <button onclick="solucionPalabra(this)">N</button>
+        <button onclick="solucionPalabra(this)">Ñ</button>
+        <button onclick="solucionPalabra(this)">O</button>
+        <button onclick="solucionPalabra(this)">P</button>
+        <button onclick="solucionPalabra(this)">Q</button>
+        <button onclick="solucionPalabra(this)">R</button>
+        <button onclick="solucionPalabra(this)">S</button>
+        <button onclick="solucionPalabra(this)">T</button>
+        <button onclick="solucionPalabra(this)">U</button>
+        <button onclick="solucionPalabra(this)">V</button>
+        <button onclick="solucionPalabra(this)">W</button>
+        <button onclick="solucionPalabra(this)">Y</button>
+        <button onclick="solucionPalabra(this)">X</button>
+        <button onclick="solucionPalabra(this)">Z</button>
+    </div>
+
+    <!-- Sección de estadísticas -->
+    <div id="estadisticas">
+        <p><strong>Puntos: </strong><span id="puntos">0</span></p>
+        <p><strong>Partidas Totales: </strong><span id="totalPartidas">0</span></p>
+        <p><strong>Partidas Ganadas: </strong><span id="partidasGanadas">0</span></p>
+        <p><strong>Porcentaje de Victorias: </strong><span id="porcentajeVictorias">0%</span></p>
+    </div>
+
+    <script src="js.js"></script>
+</body>
+</html>
